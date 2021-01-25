@@ -94,8 +94,10 @@ public class AntiAFK extends JavaPlugin implements Listener {
                 for (Player player : playersToKick) {
                     if (player.getVehicle() != null)
                         if (player.getVehicle() instanceof ArmorStand)
-                            if (((ArmorStand) player.getVehicle()).getName().startsWith("VP"))
+                            if (player.getVehicle().getName().startsWith("VP")) {
+                                lastDirectionChange.put(player, new Timestamp(System.currentTimeMillis()));
                                 continue;
+                            }
 
                     player.kickPlayer(MainConfig.kickMessage);
                 }
