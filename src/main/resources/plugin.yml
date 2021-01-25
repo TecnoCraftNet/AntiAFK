@@ -1,5 +1,7 @@
 name: AntiAFK
 main: com.gmail.filoghost.antiafk.AntiAFK
 version: 1.0
-
-depend: [WildCommons]
+commands:
+  lastmove:
+    description: Lastmove
+    usage: "§cUso corretto: §7§o/lastmove <nick>"
