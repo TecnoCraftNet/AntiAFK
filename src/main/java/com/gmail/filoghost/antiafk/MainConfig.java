@@ -28,18 +28,17 @@
  */
 package com.gmail.filoghost.antiafk;
 
-import net.cubespace.yamler.PreserveStatic;
 import net.cubespace.yamler.YamlerConfig;
 import org.bukkit.plugin.Plugin;
 
-@PreserveStatic
 public class MainConfig extends YamlerConfig {
 
 	public MainConfig(Plugin plugin) {
 		super(plugin, "config.yml");
 	}
 
-	public static int kickTimeoutMinutes = 10;
+	public static int kickTimeoutMinutes = 20;
+	public static int suffucationSeconds = 5;
 	public static String kickMessage = "Sei stato troppo tempo AFK.";
 	
 }
