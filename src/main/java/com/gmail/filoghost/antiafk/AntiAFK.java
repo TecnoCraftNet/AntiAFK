@@ -166,7 +166,7 @@ public class AntiAFK extends JavaPlugin implements Listener {
     }
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        CommandFramework.Validator.Permission(sender, "tecnoroleplay.admin");
+        if (!sender.hasPermission("tecnoroleplay.admin")) return false;
 
         if (args.length != 1) return false;
 
